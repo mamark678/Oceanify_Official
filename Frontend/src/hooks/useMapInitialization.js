@@ -1,12 +1,9 @@
 import { useEffect } from "react";
 import { GRID_STEP, THRESHOLDS } from "../utils/constants";
-import { fetchMarineData, fetchCurrentWeather } from "../utils/weatherApi";
-import { createEnhancedPopup } from "../components/PopupContent";
-import { createWavePopup, createWeatherPopup } from "../utils/mapUtils";
+import { fetchCurrentWeather, fetchMarineData } from "../utils/weatherAPI";
 import {
-  formatValue,
   degToCompass,
-  getWeatherDescription,
+  formatValue
 } from "../utils/weatherUtils";
 
 export const useMapInitialization = (

@@ -1,5 +1,4 @@
-import { THRESHOLDS } from "../utils/constants";
-import { fetchCurrentWeather, fetchWaveData } from "../utils/weatherApi";
+import { fetchCurrentWeather, fetchWaveData } from "../utils/weatherAPI";
 import { getWeatherDescription } from "../utils/weatherUtils";
 
 // Enhanced thresholds for different vessel types

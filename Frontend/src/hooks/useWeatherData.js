@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
-  fetchForecastData,
   fetchCurrentWeather,
+  fetchForecastData,
   fetchWaveData,
-} from "../utils/weatherApi";
-import { getWeatherIcon, getWeatherDescription } from "../utils/weatherUtils";
+} from "../utils/weatherAPI";
+import { getWeatherDescription, getWeatherIcon } from "../utils/weatherUtils";
 
 export const useWeatherData = () => {
   const [currentLocation, setCurrentLocation] = useState(null);
