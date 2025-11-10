@@ -1,7 +1,7 @@
 // useRescueFlow.js - Updated with better state management
-import { useState, useEffect } from 'react';
-import { fetchCurrentWeather, fetchWaveData } from '../utils/weatherApi';
+import { useState } from 'react';
 import supabase from '../supabaseClient';
+import { fetchCurrentWeather, fetchWaveData } from '../utils/weatherAPI';
 
 export const useRescueFlow = (mapRef) => {
   const [showRescueModal, setShowRescueModal] = useState(false);

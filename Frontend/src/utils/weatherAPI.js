@@ -1,4 +1,4 @@
-import { WEATHER_API_BASE, MARINE_API_BASE } from './constants';
+import { MARINE_API_BASE, WEATHER_API_BASE } from './constants';
 
 export const fetchForecastData = async (lat, lng) => {
   try {
