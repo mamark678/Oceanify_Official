@@ -328,7 +328,7 @@ export const useMapInitialization = (
       mapRef.current = map;
 
       // Base tiles with dark theme
-        const STADIA_API_KEY = import.meta.env.VITE_STADIA_API_KEY;
+        const STADIA_API_KEY = "4029b2dd-097d-48ea-8435-e1414ff6813f";
 
         L.tileLayer(
           `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${VITE_STADIA_API_KEY}`,
