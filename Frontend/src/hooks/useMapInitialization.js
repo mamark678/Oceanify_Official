@@ -334,13 +334,13 @@ export const useMapInitialization = (
       console.log('API Key length:', STADIA_API_KEY?.length);
       console.log('===================');
 
-        L.tileLayer(
-          `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${VITE_STADIA_API_KEY}`,
-          {
-            attribution:
-              '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-          }
-        ).addTo(map);
+      L.tileLayer(
+        `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${STADIA_API_KEY}`, // Changed from VITE_STADIA_API_KEY
+        {
+          attribution:
+            '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
+        }
+      ).addTo(map);
 
       // Weather layers
       const tempLayer = L.tileLayer(
