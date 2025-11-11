@@ -327,8 +327,12 @@ export const useMapInitialization = (
       const map = L.map("map").setView([8.0, 125.0], 6);
       mapRef.current = map;
 
-      // Base tiles with dark theme
-        const STADIA_API_KEY = "4029b2dd-097d-48ea-8435-e1414ff6813f";
+      const STADIA_API_KEY = import.meta.env.VITE_STADIA_API_KEY;
+
+      console.log('=== STADIA DEBUG ===');
+      console.log('API Key exists:', !!STADIA_API_KEY);
+      console.log('API Key length:', STADIA_API_KEY?.length);
+      console.log('===================');
 
         L.tileLayer(
           `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${VITE_STADIA_API_KEY}`,
