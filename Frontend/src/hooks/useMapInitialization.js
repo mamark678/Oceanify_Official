@@ -328,13 +328,15 @@ export const useMapInitialization = (
       mapRef.current = map;
 
       // Base tiles with dark theme
-      L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
-        {
-          attribution:
-            '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-        }
-      ).addTo(map);
+        const STADIA_API_KEY = import.meta.env.VITE_STADIA_API_KEY;
+
+        L.tileLayer(
+          `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${STADIA_API_KEY}`,
+          {
+            attribution:
+              '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
+          }
+        ).addTo(map);
 
       // Weather layers
       const tempLayer = L.tileLayer(
